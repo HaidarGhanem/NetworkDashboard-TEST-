@@ -1,25 +1,25 @@
-GET http://localhost:3000/dashboard/basic
+
 GET http://localhost:3000/dashboard/basicInfo
-GET http://localhost:3000/dashboard/basicConnectivity
+GET http://localhost:3000/dashboard/basicConnectivity/:src_ip/:dst_ip
 
-GET http://localhost:3000/dashboard/hardware/info
+GET http://localhost:3000/dashboard/hardware/info/:ip
 
-GET http://localhost:3000/dashboard/protocols/interfaces
-GET http://localhost:3000/dashboard/protocols/interfacesStatus
-GET http://localhost:3000/dashboard/protocols/dhcp
-GET http://localhost:3000/dashboard/protocols/rip
-GET http://localhost:3000/dashboard/protocols/ripdis
-GET http://localhost:3000/dashboard/protocols/eigrp
-GET http://localhost:3000/dashboard/protocols/eigrpdis
-GET http://localhost:3000/dashboard/protocols/ospf
-GET http://localhost:3000/dashboard/protocols/ospfdis
+GET http://localhost:3000/dashboard/protocols/interfaces/:ip
+GET http://localhost:3000/dashboard/protocols/interfacesStatus/:ip/:interface/:action
+GET http://localhost:3000/dashboard/protocols/dhcp/:ip/:interfaces/:networks
+GET http://localhost:3000/dashboard/protocols/rip/:version/:ip/:network
+GET http://localhost:3000/dashboard/protocols/ripdis/:version/:ip
+GET http://localhost:3000/dashboard/protocols/eigrp/:ip/:networks/:as_number
+GET http://localhost:3000/dashboard/protocols/eigrpdis/:ip/:as_number
+GET http://localhost:3000/dashboard/protocols/ospf/:ip/:networks/:interface/:area
+GET http://localhost:3000/dashboard/protocols/ospfdis/:ip/:networks/:interface/:area
 
-GET http://localhost:3000/dashboard/security/access 
-GET http://localhost:3000/dashboard/security/configaudit
-GET http://localhost:3000/dashboard/security/applysecurity
+GET http://localhost:3000/dashboard/security/access/:router_ip/:allowed_ips/:banned_ips
+GET http://localhost:3000/dashboard/security/configaudit/:ip
+GET http://localhost:3000/dashboard/security/applysecurity/:ip
 
-GET http://localhost:3000/dashboard/troubleshooting/connectivity 
-GET http://localhost:3000/dashboard/troubleshooting/checkconfig 
-GET http://localhost:3000/dashboard/troubleshooting/interfaces
-GET http://localhost:3000/dashboard/troubleshooting/interfaceStatus
-GET http://localhost:3000/dashboard/troubleshooting/dhcp
+GET http://localhost:3000/dashboard/troubleshooting/connectivity/:src_ip/:dst_ip
+GET http://localhost:3000/dashboard/troubleshooting/checkconfig/:ip
+GET http://localhost:3000/dashboard/troubleshooting/interfaces/:ip
+GET http://localhost:3000/dashboard/troubleshooting/interfacesStatus/:ip/:interface/:action
+GET http://localhost:3000/dashboard/troubleshooting/dhcp/:ip/:interfaces/:networks

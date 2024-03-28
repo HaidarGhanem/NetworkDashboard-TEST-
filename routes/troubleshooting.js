@@ -28,7 +28,7 @@ router.get('/connectivity/:src_ip/:dst_ip', (req, res) => {
 //----------------------------------
 // GET troubleshooting/checkconfig 
 //----------------------------------
-router.get('/checkconfig/:ip', async (req, res) => {
+router.get('/checkconfig/:ip', (req, res) => {
     const { ip } = req.params;
     try {
         if (!ip) {
