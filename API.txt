@@ -1,4 +1,8 @@
 
+POST http://localhost:3000/welcome/register
+POST http://localhost:3000/welcome/login
+
+
 GET http://localhost:3000/dashboard/basicInfo
 GET http://localhost:3000/dashboard/basicConnectivity/:src_ip/:dst_ip
 
