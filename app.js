@@ -9,6 +9,7 @@ dotenv.config()
 const express = require ('express')
 
 //initialization
+const PORT = process.env.PORT || 3000
 const app = express()
 
 //middlewares
@@ -24,4 +25,4 @@ app.use('/dashboard/troubleshooting' , require('./routes/troubleshooting.js'))
 app.use('/dashboard/security' , require('./routes/security'))
 app.use('/dashboard/protocols' , require('./routes/protocols'))
 
-app.listen(process.env.PORT, ()=>{console.log(`server is running`)})
+app.listen(PORT, ()=>{console.log(`server is running`)})
